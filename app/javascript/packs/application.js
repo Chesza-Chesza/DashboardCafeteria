@@ -12,10 +12,10 @@ import "channels"
 // global.$ = global.jQuery = jQuery
 // window.$ = window.jQuery = jQuery
 
-import Chartkick from 'chartkick'
-import Highcharts from 'highcharts'
-window.Highcharts = Highcharts
-
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import Chartkick from 'chartkick'
+import Highcharts from 'highcharts'
+window.Highcharts = Highcharts
