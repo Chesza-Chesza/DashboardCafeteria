@@ -1,6 +1,55 @@
-<h1>Dashboards#index</h1>
-<p>Find me in app/views/dashboards/index.html.erb</p>
+<div class="container">
+<h1>Dashboard</h1>
+<hr>
+<h2 class="my-2">Month Sales</h2>
+<p>12 month Sales</p>
+<div class="row my-5">
+    <div class="col-lg-12 my-2"> 
+        <div class="card"> <%= column_chart @sales_12_months, title: "Month Sales"%></div>
+    </div>
 
+    <div class="col-lg-6 my-2"> 
+        <div class="card"> <%= column_chart @quantity_12_months, title: "Month Sales Quantity" %></div>
+    </div>
 
-<%= column_chart @coffees_in_months %>
-<%= pie_chart @coffees_in_months %>
+    <div class="col-lg-6 my-2"> 
+        <div class="card"> <%= column_chart @average_12_months, title: "Sales Average" %></div>
+    </div>
+</div>
+<h2>
+<hr>
+<h2 class="my-2">Sales by Origin </h2>
+<div class="row my-5">
+    <div class="col-lg-6 my-2"> 
+        <div class="card"> <%= pie_chart @pie_chart_12_months, title: "Sales by Origin (12 months)" %></div>
+    </div>
+    <div class="col-lg-6 my-2"> 
+        <div class="card"> <%= pie_chart @pie_chart_6_months, title: "Sales by Origin (6 months)" %></div>
+    </div>
+
+    <div class="col-lg-6 my-2"> 
+        <div class="card"> <%= pie_chart @pie_chart_3_months, title: "Sales by Origin (3 months)" %></div>
+    </div>
+    <div class="col-lg-6 my-2"> 
+        <div class="card"> <%= pie_chart  @pie_chart_last_month, title: "Sales by Origin (Last month)" %></div>
+    </div>
+</div>
+
+<hr>
+<h2 class="my-2">Sales by Coffee Blend </h2>
+<div class="row my-5">
+    <div class="col-lg-6 my-2"> 
+        <div class="card"> <%=  pie_chart @pie_blend_name_12_months, title: "Sales by Origin (12 months)" %></div>
+    </div>
+    <div class="col-lg-6 my-2"> 
+        <div class="card"> <%= pie_chart @pie_blend_name_6_months, title: "Sales by Origin (6 months)" %></div>
+    </div>
+
+    <div class="col-lg-6 my-2"> 
+        <div class="card"> <%= pie_chart @pie_blend_name_3_months, title: "Sales by Origin (3 months)" %></div>
+    </div>
+    <div class="col-lg-6 my-2"> 
+        <div class="card"> <%= pie_chart @pie_blend_name_last_month, title: "Sales by Origin (Last month)" %></div>
+    </div>
+</div>
+</div>
